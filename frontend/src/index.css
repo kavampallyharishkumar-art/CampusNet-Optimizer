@@ -1,0 +1,74 @@
+@import '@xyflow/react/dist/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #070b14;
+  color: #f1f5f9;
+  overflow: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* React Flow customizations */
+.react-flow__attribution {
+  display: none !important;
+}
+
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: #38bdf8;
+  border: 2px solid #0f172a;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.react-flow__handle:hover {
+  transform: scale(1.3);
+  background: #10b981;
+}
+
+/* Glow effects for optimal MST edges */
+@keyframes mstFlow {
+  from {
+    stroke-dashoffset: 40;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.mst-edge-optimal path {
+  stroke-dasharray: 6 3;
+  animation: mstFlow 0.8s linear infinite !important;
+  filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.8));
+}
+
+.mst-edge-overbudget path {
+  stroke-dasharray: 4 4;
+  animation: mstFlow 1.2s linear infinite !important;
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.9));
+}

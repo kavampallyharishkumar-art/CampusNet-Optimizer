@@ -1,0 +1,16 @@
+{
+  "name": "campusnet-optimizer-backend",
+  "version": "1.0.0",
+  "description": "Backend API for CampusNet Optimizer MST graph solver",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/kruskal.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

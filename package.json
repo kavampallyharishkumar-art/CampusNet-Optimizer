@@ -1,0 +1,21 @@
+{
+  "name": "campusnet-optimizer",
+  "version": "1.0.0",
+  "description": "CampusNet Optimizer — College Network Expansion Planner using Kruskal's MST Algorithm",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend test"
+  },
+  "keywords": [
+    "kruskal",
+    "minimum-spanning-tree",
+    "graph-algorithms",
+    "react-flow",
+    "dsu",
+    "campus-network"
+  ],
+  "author": "",
+  "license": "MIT"
+}
